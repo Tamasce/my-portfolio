@@ -22,7 +22,7 @@ const Hero = () => {
         </h2>
         <TextGenerateEffect className='text-center text-[40px] md:text-5xl lg:text-6xl' words='Transforming Concepts into Seamless User Experiences'/>
         <p className='text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl'>
-          Hi I'm Giovanni, a Next.js Developer based in Italy
+          Hi I&apos;m Giovanni, a Next.js Developer based in Italy
         </p>
         <a href='#about'>
           <MagicButton title='Show my work' icon={<FaLocationArrow />} position='right'/>

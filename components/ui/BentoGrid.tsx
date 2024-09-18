@@ -8,10 +8,8 @@ import animationData from '../../data/confetti.json'
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 export const BentoGrid = ({
-  className,
   children,
 }: {
-  className?: string;
   children?: React.ReactNode;
 }) => {
   return (

@@ -1,5 +1,7 @@
-import { workExperience } from "@/data"
+import React from "react"
+import { companies, workExperience } from "@/data"
 import { Button } from "./ui/MovingBorder"
+import { LinkPreview } from "./ui/LinkPreview"
 
 const Experience = () => {
   return (
@@ -27,6 +29,28 @@ const Experience = () => {
         </Button>
       ))}
     </div>
+    <div className="flex flex-wrap items-center justify-center gap-4 md:gap-16 max-lg:mt-10 mt-10">
+          {companies.map((company) => (
+            <React.Fragment key={company.id}>
+              <LinkPreview url={company.url}>
+              <div className="flex md:max-w-60 max-w-32 gap-2">
+                <img
+                  src={company.img}
+                  alt={company.name}
+                  className={`md:w-10 w-5 ${company.id === 3 && 'md:w-[65px]'} ${company.id === 2 && 'md:w-[200px]'}`}
+                />
+
+                {company.id !== 3 && company.id !== 2 && (<img
+                  src={company.nameImg}
+                  alt={company.name}
+                  width={company.id === 4 || company.id === 5 ? 100 : 150}
+                  className={`md:w-24 w-20 ${company.id === 5 && 'md:w-[170px]'}`}
+                />)}
+              </div>
+              </LinkPreview>
+            </React.Fragment>
+          ))}
+        </div>
     </div>
   )
 }

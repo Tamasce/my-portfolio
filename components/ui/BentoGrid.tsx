@@ -7,6 +7,10 @@ import { useState } from "react";
 import animationData from '../../data/confetti.json'
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
+
+import { tooltip } from "@/data";
+import { Compare } from "./compare";
+
 export const BentoGrid = ({
   children,
 }: {
@@ -15,7 +19,7 @@ export const BentoGrid = ({
   return (
     <div
       className={cn(
-        "grid lg:auto-rows-[5rem] lg:grid-cols-5 grid-cols-1 md:grid-cols-9 gap-4 max-w-7xl mx-auto md:grid-rows-7 md:h-[1000px] xl:h-[1200px]"
+        "grid lg:auto-rows-[5rem] lg:grid-cols-5 grid-cols-1 md:grid-cols-9 gap-4 max-w-7xl mx-auto md:grid-rows-7 md:h-[1000px] xl:h-[1200px] sm:grid-rows-7"
       )}
     >
       {children}
@@ -42,10 +46,20 @@ export const BentoGridItem = ({
   titleClassName?: string;
   spareImg?: string;
 }) => {
-  const handleCopy = ()=>{
+    const handleDownload = () => {
+      const link = document.createElement('a');
+      link.href = '/resume.pdf'; 
+      link.download = 'Stancampiano_Giovanni_Resume.pdf';
+      link.click();
+      setCopied(true);
+      setTimeout(() => {
+        setCopied(false);
+      }, 5000);
+    };
+  {/*const handleCopy = ()=>{
     navigator.clipboard.writeText('giovannistancampiano1999@gmail.com')
     setCopied(true);
-  }
+  }*/}
   const [copied, setCopied] = useState(false)
   return (
     <div
@@ -58,11 +72,25 @@ export const BentoGridItem = ({
     >
       <div className={`${id === 6 && 'flex justify-center'} h-full`}>
         <div className="w-full h-full absolute top-0 left-0">
-          {img && (<img 
+          {img && id !== 1 && (<img 
             src={img}
             alt={img}
             className={cn(imgClassName,'object-cover object-center')}
           />)}
+          {id === 1 && (
+            <div className='w-full h-full'> 
+            <Compare 
+            firstImage='/code-solution.png'
+            secondImage="/engineer.webp"
+            firstImageClassName="object-cover object-left-top"
+            secondImageClassname="object-cover object-right-bottom"
+            className="h-full w-full md:h-full md:w-full"
+            slideMode="hover"
+            />
+            
+            
+            </div>
+          )}
         </div>
         <div className={`absolute right-0 -bottom-5 ${id === 5 && 'w-full opacity-80'}`}>
             {spareImg && (<img 
@@ -82,7 +110,7 @@ export const BentoGridItem = ({
           <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10">
             {description}
           </div>
-          <div className="font-sans font-bold text-xl lg:text-2xl max-w-96 z-10">
+          <div className={`font-sans font-bold text-xl lg:text-2xl max-w-96 z-10 ${id === 1 && 'flex absolute top-0 left-0 overflow-hidden'}`}>
           {title}
           </div>
         {id === 2 && <GlobeDemo /> }
@@ -114,7 +142,7 @@ export const BentoGridItem = ({
                 }
               }}/>
             </div>
-            <MagicButton title={copied ? 'Email copied' : 'Copy my email'} icon={<IoCopyOutline />} position='left' otherClasses="bg-[#161a31]" handleClick={handleCopy}/>
+            <MagicButton title={copied ? 'Did it!' : 'Download my Resume'} icon={<IoCopyOutline />} position='left' otherClasses="bg-[#161a31]" handleClick={handleDownload} id="download"/>
           </div>
         )}
       </div>

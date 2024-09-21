@@ -1,7 +1,8 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
-  { name: "Testimonials", link: "#testimonials" },
+  { name: "Experience", link: "#work" },
+  { name: "Education", link: "#education" },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -10,7 +11,7 @@ export const gridItems = [
     id: 1,
     title: "I prioritize client collaboration, fostering open communication ",
     description: "",
-    className: "lg:col-span-3 md:col-span-5 md:row-span-4 lg:min-h-[60vh]",
+    className: "lg:col-span-3 md:col-span-5 md:row-span-4 lg:min-h-[60vh] sm:row-span-2",
     imgClassName: "w-full h-full",
     titleClassName: "justify-end",
     img: "/b1.svg",
@@ -18,7 +19,7 @@ export const gridItems = [
   },
   {
     id: 2,
-    title: "I'm very flexible with time zone communications",
+    title: "I'am flexible and fully available to work shifts and participate in business trips.",
     description: "",
     className: "lg:col-span-2 md:col-span-4 md:row-span-2",
     imgClassName: "",
@@ -38,7 +39,7 @@ export const gridItems = [
   },
   {
     id: 4,
-    title: "Tech enthusiast with a passion for development.",
+    title: "Passionate Tech Developer and System Engineer",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-1",
     imgClassName: "",
@@ -59,7 +60,7 @@ export const gridItems = [
   },
   {
     id: 6,
-    title: "Do you want to start a project together?",
+    title: "Feel free to take a look at my resume.",
     description: "",
     className: "lg:col-span-2 md:col-span-3 md:row-span-2",
     imgClassName: "",
@@ -68,105 +69,79 @@ export const gridItems = [
     spareImg: "",
   },
 ];
+export const tooltip = [
+  {
+    id: "1",
+    name: "You can move it!"
+  }
+];
 
 export const projects = [
   {
     id: 1,
-    title: "3D Solar System Planets to Explore",
-    des: "Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.",
-    img: "/p1.svg",
+    title: "Brainwave - Explore the Possibilities of AI Chatting",
+    des: "Unleash the power of AI within Brainwave. Upgrade your productivity with Brainwave, the open AI chat app.",
+    img: "/brainwave.png",
     iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-    link: "https://github.com/adrianhajdin?tab=repositories",
+    link: "https://brainwave-one-tau.vercel.app",
   },
   {
     id: 2,
-    title: "Yoom - Video Conferencing App",
-    des: "Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.",
-    img: "/p2.svg",
-    iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/stream.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
-  },
-  {
-    id: 3,
-    title: "AI Image SaaS - Canva Application",
-    des: "A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.",
-    img: "/p3.svg",
-    iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/c.svg"],
-    link: "https://github.com/adrianhajdin/ai_saas_app",
-  },
-  {
-    id: 4,
     title: "Animated Apple Iphone 3D Website",
     des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
     img: "/p4.svg",
     iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-    link: "https://github.com/adrianhajdin/iphone",
+    link: "https://apple-pro-website--lake.vercel.app",
   },
 ];
 
 export const testimonials = [
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    quote: ['Gasdynamics, Mechanics of flight, Aircraft engines, Aerospace systems, Aircraft structures;','Aerospace vehicle design, Endoreactors, Turbulent flows, Computational fluid dynamics of propulsion systems/Fluid dynamics of turbomachinery.'],
     name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
+    title: "Master's Degree Aerospace Propulsion System Engineer",
   },
   {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
+    quote: ['Thermofluid dynamics, Machine mechanics, Fundamentals of structural mechanics, Fundamentals of Electrical Engineering and Electronics;',
+     'Aerodynamics, Aeronautical constructions, Materials Science and Technology/Metallurgy, Aerospace onboard systems.'],
     name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
-  {
-    quote:
-      "Collaborating with Adrian was an absolute pleasure. His professionalism, promptness, and dedication to delivering exceptional results were evident throughout our project. Adrian's enthusiasm for every facet of development truly stands out. If you're seeking to elevate your website and elevate your brand, Adrian is the ideal partner.",
-    name: "Michael Johnson",
-    title: "Director of AlphaStream Technologies",
-  },
+    title: "B.S Aerospace Engineer",
+  }
 ];
 
 export const companies = [
   {
     id: 1,
-    name: "cloudinary",
-    img: "/cloud.svg",
-    nameImg: "/cloudName.svg",
-  },
-  {
-    id: 2,
-    name: "appwrite",
-    img: "/app.svg",
-    nameImg: "/appName.svg",
+    name: "NextJs",
+    img: "/nextJs.svg",
+    nameImg: "/next-logo.svg",
+    url: "https://nextjs.org"
   },
   {
     id: 3,
-    name: "HOSTINGER",
-    img: "/host.svg",
-    nameImg: "/hostName.svg",
+    name: "ReactJs",
+    img: "/react.png",
+    url: "https://react.dev"
   },
   {
     id: 4,
     name: "stream",
-    img: "/s.svg",
+    img: "/gsap-greensock.svg",
     nameImg: "/streamName.svg",
+    url: "https://gsap.com"
+  },
+  {
+    id: 2,
+    name: "IBM",
+    img: "/Doors.webp",
+    url: "https://www.ibm.com/it-it/products/requirements-management"
   },
   {
     id: 5,
     name: "docker.",
-    img: "/dock.svg",
+    img: "threejs-1.svg",
     nameImg: "/dockerName.svg",
+    url: "https://threejs.org"
   },
 ];
 
@@ -204,14 +179,12 @@ export const workExperience = [
 export const socialMedia = [
   {
     id: 1,
-    img: "/git.svg",
+    img: "/linkdin.svg",
+    url: 'https://www.linkedin.com/in/giovanni-stancampiano-b80a63251'
   },
   {
     id: 2,
-    img: "/twit.svg",
-  },
-  {
-    id: 3,
-    img: "/link.svg",
+    img: "/instagram.svg",
+    url: 'https://www.instagram.com/giovanni_stancampiano'
   },
 ];

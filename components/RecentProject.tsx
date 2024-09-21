@@ -11,6 +11,7 @@ const RecentProject = () => {
           recent projects
         </span>
       </h1>
+      <div className="flex flex-col">
       <div className="flex p-4 gap-x-24 gap-y-8 flex-wrap justify-center mt-10 items-center">
         {projects.map(({id, title, des, img, iconLists, link})=>(
           <div key={id} className="lg:min-h-[32.5rem] flex items-center justify-center w-[80vw] sm:h-[41rem] h-[32rem] sm:w-[570px] ">
@@ -45,6 +46,10 @@ const RecentProject = () => {
             </PinContainer>
           </div>
         ))}
+      </div>
+      <div>
+        <p className="text-xs leading-[1.6] text-white-200 font-normal">Please note that the projects showcased here are for illustrative purposes only, as I focused solely on the frontend development.</p>
+      </div>
       </div>
     </div>
   )

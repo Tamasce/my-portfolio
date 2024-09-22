@@ -11,7 +11,7 @@ export const InfiniteMovingCards = ({
   className,
 }: {
   items: {
-    quote: string;
+    quote: string[];
     name: string;
     title: string;
   }[];
@@ -99,20 +99,26 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className=" relative z-20 text-lg leading-[1.6] text-white font-normal">
-                {item.quote}
-              </span>
-              <div className="relative z-20 mt-6 flex flex-row items-center">
+              
+              <div className="relative z-20  flex flex-row items-center">
                 <span className="flex flex-col gap-1">
-                  <div className="me-3">
-                    <img src="/profile.svg" alt="profile"/>
+                  <div className="me-3 flex items-center">
+                    <img src="/logo.svg" alt="profile" width={150}/>
                   </div>
                   <div className="flex flex-col gap-1">
-                  <span className=" text-sm md:text-lg leading-[1.6] text-white font-bold">
-                    {item.name}
-                  </span>
                   <span className=" text-sm leading-[1.6] text-white-200 font-normal">
                     {item.title}
+                  </span>
+                  <span className="text-purple font-semibold">
+                    Relevant work:
+                  </span>
+                  <span className=" relative z-20 text-lg leading-[1.6] text-white font-normal ml-10">
+                    <ul className="custom-list">
+                      {item.quote.map((cla, i)=>(
+                        <li key={i}>{cla}</li>
+                      ))}
+                    </ul>
+          
                   </span>
                   </div>
                   

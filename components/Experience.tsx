@@ -37,14 +37,14 @@ const Experience = () => {
                 <img
                   src={company.img}
                   alt={company.name}
-                  className={`md:w-10 w-5 ${company.id === 3 && 'md:w-[65px]'} ${company.id === 2 && 'md:w-[200px]'}`}
+                  className={`md:w-10 w-5 ${company.id === 3 && 'md:w-[65px] w-[40px]'} ${company.id === 2 && 'md:w-[200px] w-[150px]'}`}
                 />
 
                 {company.id !== 3 && company.id !== 2 && (<img
                   src={company.nameImg}
                   alt={company.name}
                   width={company.id === 4 || company.id === 5 ? 100 : 150}
-                  className={`md:w-24 w-20 ${company.id === 5 && 'md:w-[170px]'}`}
+                  className={`md:w-24 w-20 ${company.id === 5 && 'md:w-[170px] w-[150px]'}`}
                 />)}
               </div>
               </LinkPreview>

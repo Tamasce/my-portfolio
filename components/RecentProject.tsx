@@ -20,7 +20,7 @@ const RecentProject = () => {
                 <div className="relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162d]">
                   <img src="/bg.png" alt="bg-img"/>
                 </div>
-                <img src={img} alt={title} className="z-10 absolute bottom-0"/>
+                <img src={img} alt={title} className={`${id === 1 && 'z-10 absolute bottom-0 lg:h-[315px] lg:w-[500px]'} ${id=== 2 &&'z-10 absolute bottom-0'}`}/>
               </div>
               <h1 className="font-bold lg:text-2x md:text-xl text-base line-clamp-1">
                 {title}
@@ -48,7 +48,7 @@ const RecentProject = () => {
         ))}
       </div>
       <div>
-        <p className="text-xs leading-[1.6] text-white-200 font-normal">Please note that the projects showcased here are for illustrative purposes only, as I focused solely on the frontend development.</p>
+        <p className=" flex text-xs leading-[1.6] text-white-200 font-normal mt-10 items-center justify-center">Please note that the projects showcased here are for illustrative purposes only, as I focused solely on the frontend development.</p>
       </div>
       </div>
     </div>

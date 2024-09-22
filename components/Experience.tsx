@@ -5,7 +5,7 @@ import { LinkPreview } from "./ui/LinkPreview"
 
 const Experience = () => {
   return (
-    <div className="py-20" id="testimonials">
+    <div className="py-20" id="experience">
     <h1 className="heading">
       My {' '} 
       <span className="text-purple">
